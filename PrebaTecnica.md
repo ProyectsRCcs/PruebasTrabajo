@@ -154,6 +154,15 @@ Este análisis explora los sentimientos expresados en un conjunto de datos de re
     plt.show()
 
 ## Parte 2: Clasificación de Sentimientos con BERT
+
+La mejor elección depende de factores como el tamaño y la naturaleza de tu conjunto de datos, los recursos computacionales, la velocidad de inferencia requerida y los matices específicos de tu tarea de análisis de sentimiento. A menudo es una buena práctica experimentar con múltiples enfoques y comparar su rendimiento.
+Consieraciones especificas por las cuales se escogió BERT: 
+1. Comprensión contextual: BERT entiende el contexto de las palabras en una oración, lo cual es crucial para el análisis de sentimiento donde el significado de las palabras puede cambiar según su entorno.
+2. Pre-entrenamiento: BERT está pre-entrenado en un gran corpus de texto, lo que le permite tener una sólida comprensión base del lenguaje antes de ajustarse a tareas específicas.
+3. Capacidades multilingües: Existen modelos BERT pre-entrenados para muchos idiomas, incluyendo el español como se usa en este proyecto.
+4. Rendimiento de vanguardia: BERT y sus variantes han logrado resultados superiores en muchos puntos de referencia de PNL, incluyendo tareas de análisis de sentimiento.
+5. Manejo de dependencias de largo alcance: La arquitectura de transformadores permite a BERT capturar relaciones entre palabras que están alejadas en el texto.
+
     import pandas as pd
     import numpy as np
     from sklearn.model_selection import train_test_split

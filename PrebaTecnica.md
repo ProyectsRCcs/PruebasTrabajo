@@ -2,31 +2,11 @@
 
 Este análisis explora los sentimientos expresados en un conjunto de datos de redes sociales, utilizando técnicas de procesamiento de lenguaje natural y aprendizaje automático con BERT.
 
-## Parte 1: Análisis Exploratorio
+# Parte 1: Análisis Exploratorio
 
-### Importación de Librerías
+# Importación de Librerías
 
 ```python
-import unicodedata
-import matplotlib.pyplot as plt
-from wordcloud import WordCloud
-import seaborn as sns
-import pandas as pd
-import re
-import nltk
-from nltk.corpus import stopwords
-
-nltk.download('punkt')
-nltk.download('stopwords')
-
-# Fijando ruta de trabajo
-ruta_archivo = r"C:\Users\Eddlu\OneDrive\Documents\GenioStudios\PruebaTec.csv"
-columna_texto = 'message'
-
-df = pd.read_csv(ruta_archivo, delimiter=';', encoding='latin-1', on_bad_lines='skip')
-
-
-## Instalación de paquetes para parte 2
     import unicodedata
     import matplotlib.pyplot as plt
     from wordcloud import WordCloud
@@ -36,17 +16,37 @@ df = pd.read_csv(ruta_archivo, delimiter=';', encoding='latin-1', on_bad_lines='
     import nltk
     from nltk.corpus import stopwords
 
-## Descargar recursos de NLTK
     nltk.download('punkt')
     nltk.download('stopwords')
 
-## Ruta del archivo CSV
+# Fijando ruta de trabajo
     ruta_archivo = r"C:\Users\Eddlu\OneDrive\Documents\GenioStudios\PruebaTec.csv"
-
-## Columna a procesar
     columna_texto = 'message'
 
-## Leer el archivo CSV, especificando delimitador y codificación
+    df = pd.read_csv(ruta_archivo, delimiter=';', encoding='latin-1', on_bad_lines='skip')
+
+
+# Instalación de paquetes para parte 2
+    import unicodedata
+    import matplotlib.pyplot as plt
+    from wordcloud import WordCloud
+    import seaborn as sns
+    import pandas as pd
+    import re
+    import nltk
+    from nltk.corpus import stopwords
+
+# Descargar recursos de NLTK
+    nltk.download('punkt')
+    nltk.download('stopwords')
+
+# Ruta del archivo CSV
+    ruta_archivo = r"C:\Users\Eddlu\OneDrive\Documents\GenioStudios\PruebaTec.csv"
+
+# Columna a procesar
+    columna_texto = 'message'
+
+# Leer el archivo CSV, especificando delimitador y codificación
 try:
     df = pd.read_csv(ruta_archivo, delimiter=';', encoding='latin-1', on_bad_lines='skip')
 
@@ -58,7 +58,7 @@ try:
     stop_words = set(stopwords.words('spanish'))
     stop_words.update(['aa', 'aaa', 'aaaa', 'aaae', 'eeea', 'eaaa', 'aa12aa', 'aa1aa', 'a12a', 'taao', 'aaaaa', 'aaaaaa', 'eaaaaa', 'aaaaaaa', 'asaa', 'a', 'ante', 'bajo', 'cabe', 'con', 'contra', 'de', 'desde', 'durante', 'en', 'entre', 'hacia', 'hasta', 'mediante', 'para', 'por', 'según', 'sin', 'so', 'sobre', 'tras', 'versus', 'vía'])  # Agrega más según sea necesario
 
-    ## Función para preprocesar el texto (mejorada)
+    # Función para preprocesar el texto (mejorada)
     def preprocesar_texto(texto):
         # Normalizar a NFKD (descompone caracteres acentuados)
         texto = unicodedata.normalize('NFKD', texto)
@@ -201,12 +201,13 @@ print(frecuencia_sentimientos)
 frecuencia_sentimientos.to_csv(f"{ruta_salida}/frecuencia_sentimientos.csv")  # Guardar tabla
 
 # Nube de Palabras. Sentimiento Positivo
+https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/Eddlu/OneDrive/Documents/GenioStudios/resultados/nube_palabras_positivo.png?version%3D1721236007798
 
-"C:/Users/Eddlu/OneDrive/Documents/GenioStudios/resultados/nube_palabras_positivo.png"
 # Nube de Palabras. Sentimiento Neutro
-"C:/Users/Eddlu/OneDrive/Documents/GenioStudios/resultados/nube_palabras_neutro.png"
+https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/Eddlu/OneDrive/Documents/GenioStudios/resultados/nube_palabras_neutro.png?version%3D1721235925344
+
 # Nube de Palabras. Sentimiento Negativo
-"C:/Users/Eddlu/OneDrive/Documents/GenioStudios/resultados/nube_palabras_negativo.png"
+https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/Eddlu/OneDrive/Documents/GenioStudios/resultados/nube_palabras_positivo.png?version%3D1721236007798
 
 Frecuencia de Sentimientos:
 <resultados de frecuencia_sentimientos>

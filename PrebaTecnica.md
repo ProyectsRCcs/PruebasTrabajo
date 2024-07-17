@@ -26,7 +26,7 @@ columna_texto = 'message'
 df = pd.read_csv(ruta_archivo, delimiter=';', encoding='latin-1', on_bad_lines='skip')
 
 
-# Instalación de paquetes para parte 2
+## Instalación de paquetes para parte 2
     import unicodedata
     import matplotlib.pyplot as plt
     from wordcloud import WordCloud
@@ -36,17 +36,17 @@ df = pd.read_csv(ruta_archivo, delimiter=';', encoding='latin-1', on_bad_lines='
     import nltk
     from nltk.corpus import stopwords
 
-# Descargar recursos de NLTK
+## Descargar recursos de NLTK
     nltk.download('punkt')
     nltk.download('stopwords')
 
-# Ruta del archivo CSV
+## Ruta del archivo CSV
     ruta_archivo = r"C:\Users\Eddlu\OneDrive\Documents\GenioStudios\PruebaTec.csv"
 
-# Columna a procesar
+## Columna a procesar
     columna_texto = 'message'
 
-# Leer el archivo CSV, especificando delimitador y codificación
+## Leer el archivo CSV, especificando delimitador y codificación
 try:
     df = pd.read_csv(ruta_archivo, delimiter=';', encoding='latin-1', on_bad_lines='skip')
 
@@ -58,7 +58,7 @@ try:
     stop_words = set(stopwords.words('spanish'))
     stop_words.update(['aa', 'aaa', 'aaaa', 'aaae', 'eeea', 'eaaa', 'aa12aa', 'aa1aa', 'a12a', 'taao', 'aaaaa', 'aaaaaa', 'eaaaaa', 'aaaaaaa', 'asaa', 'a', 'ante', 'bajo', 'cabe', 'con', 'contra', 'de', 'desde', 'durante', 'en', 'entre', 'hacia', 'hasta', 'mediante', 'para', 'por', 'según', 'sin', 'so', 'sobre', 'tras', 'versus', 'vía'])  # Agrega más según sea necesario
 
-    # Función para preprocesar el texto (mejorada)
+    ## Función para preprocesar el texto (mejorada)
     def preprocesar_texto(texto):
         # Normalizar a NFKD (descompone caracteres acentuados)
         texto = unicodedata.normalize('NFKD', texto)

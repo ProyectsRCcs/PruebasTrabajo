@@ -163,6 +163,7 @@ Consieraciones especificas por las cuales se escogió BERT:
 4. Rendimiento de vanguardia: BERT y sus variantes han logrado resultados superiores en muchos puntos de referencia de PNL, incluyendo tareas de análisis de sentimiento.
 5. Manejo de dependencias de largo alcance: La arquitectura de transformadores permite a BERT capturar relaciones entre palabras que están alejadas en el texto.
 
+### Importación de Librerías
     import pandas as pd
     import numpy as np
     from sklearn.model_selection import train_test_split
